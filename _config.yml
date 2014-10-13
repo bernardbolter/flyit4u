@@ -1,0 +1,20 @@
+# Site settings
+baseurl: "" # the subpath of your site, e.g. /blog/
+port: 4001
+
+exclude: [
+  .git,
+  .gitignore,
+  .DS_Store,
+  CNAME,
+  svg,
+  _assets,
+  .sass-cache,
+  package.json, 
+  Gruntfile.js, 
+  node_modules, 
+  readme.md
+]
+
+# Build settings
+markdown: kramdown
