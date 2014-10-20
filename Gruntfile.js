@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     sass: {
       global: {
         options: {
-          style: "compressed"
+          style: "expanded"
         },
         files: {
           "_assets/sass/unprefixed/global-unprefixed.css": "_assets/sass/global.sass"
