@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     uglify: {
       global: {
         files: {
-          "js/site.min.js": ["_assets/js/vendor/*.js", "assets/js/*.js"]
+          "js/site.min.js": ["assets/js/vendor/*.js", "assets/js/*.js"]
         }
       }
     },
@@ -21,14 +21,14 @@ module.exports = function(grunt) {
           style: "expanded"
         },
         files: {
-          "_assets/sass/unprefixed/global-unprefixed.css": "assets/sass/global.sass"
+          "assets/sass/unprefixed/global-unprefixed.css": "assets/sass/global.sass"
         }
       }
     },
 
     autoprefixer: {
       global: {
-        src: "_assets/sass/unprefixed/global-unprefixed.css",
+        src: "assets/sass/unprefixed/global-unprefixed.css",
         dest: "css/global.css"
       }
     },
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         tasks: ["shell:jekyllBuild"]
       },
       js: {
-        files: ["_assets/js/*.js"],
+        files: ["assets/js/*.js"],
         tasks: ["uglify", "shell:jekyllBuild"]
       },
       css: {
