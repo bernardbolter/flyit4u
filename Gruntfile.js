@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     uglify: {
       global: {
         files: {
-          "js/site.min.js": ["_assets/js/vendor/*.js", "_assets/js/*.js"]
+          "js/site.min.js": ["_assets/js/vendor/*.js", "assets/js/*.js"]
         }
       }
     },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           style: "expanded"
         },
         files: {
-          "_assets/sass/unprefixed/global-unprefixed.css": "_assets/sass/global.sass"
+          "_assets/sass/unprefixed/global-unprefixed.css": "assets/sass/global.sass"
         }
       }
     },
@@ -55,11 +55,11 @@ module.exports = function(grunt) {
         tasks: ["uglify", "shell:jekyllBuild"]
       },
       css: {
-        files: ["_assets/sass/*.scss", "_assets/sass/*/*.scss", "_assets/sass/*.sass", "_assets/sass/*/*.sass"],
+        files: ["assets/sass/*.scss", "assets/sass/*/*.scss", "assets/sass/*.sass", "assets/sass/*/*.sass"],
         tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
       },
       svgIcons: {
-        files: ["_assets/svg/*.svg"],
+        files: ["assets/svg/*.svg"],
         tasks: ["svgstore", "shell:jekyllBuild"]
       }
     },
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
       },
       default: {
         files: {
-          "_includes/svg-defs.svg": ["_assets/svg/*.svg"]
+          "_includes/svg-defs.svg": ["assets/svg/*.svg"]
         }
       }
     }
